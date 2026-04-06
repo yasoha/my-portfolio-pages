@@ -195,20 +195,30 @@
                 </div>
             </div>
             <div class="lg:w-1/2 w-full">
-                <form class="glass p-12 rounded-[3rem] space-y-8 text-gray-900 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] border border-white/10">
-                    <h3 class="text-3xl font-black text-center mb-6 text-dark">أدخلي معلوماتك للطلب</h3>
-                    <div>
-                        <label class="block font-bold text-lg mb-2">الاسم الكامل</label>
-                        <input type="text" class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="الاسم الكامل">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-lg mb-2">رقم الهاتف</label>
-                        <input type="tel" class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="06XXXXXXXX">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-lg mb-2">المدينة</label>
-                        <input type="text" class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="المدينة">
-                    </div>
+    <form id="orderForm" class="glass p-12 rounded-[3rem] space-y-8 text-gray-900 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] border border-white/10">
+        <h3 class="text-3xl font-black text-center mb-6 text-dark">أدخلي معلوماتك للطلب</h3>
+        
+        <div>
+            <label class="block font-bold text-lg mb-2">الاسم الكامل</label>
+            <input type="text" name="name" required class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="الاسم الكامل">
+        </div>
+        
+        <div>
+            <label class="block font-bold text-lg mb-2">رقم الهاتف</label>
+            <input type="tel" name="phone" required class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="06XXXXXXXX">
+        </div>
+        
+        <div>
+            <label class="block font-bold text-lg mb-2">المدينة</label>
+            <input type="text" name="city" required class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="المدينة">
+        </div>
+
+        <button id="submitBtn" type="submit" class="w-full bg-secondary text-white py-6 rounded-2xl text-3xl font-black shadow-[0_20px_40px_-5px_#f97316] hover:bg-orange-600 transition-all shadow-secondary/30 active:scale-95">
+            تأكيد الطلب الآن
+        </button>
+        <p class="text-center text-xs text-slate-500 pt-4">سيتم الاتصال بك لتأكيد العنوان قبل الإرسال.</p>
+    </form>
+</div>
                  <button id="submitBtn" type="submit" class="w-full bg-secondary text-white py-6 rounded-2xl text-3xl font-black shadow-[0_20px_40px_-5px_#f97316] hover:bg-orange-600 transition-all shadow-secondary/30 active:scale-95">
     تأكيد الطلب الآن
 </button>
