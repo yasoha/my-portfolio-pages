@@ -213,7 +213,7 @@
             <input type="text" name="city" required class="w-full p-5 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/20 focus:bg-white outline-none transition" placeholder="المدينة">
         </div>
 
-        <button id="submitBtn" type="submit" class="w-full bg-secondary text-white py-6 rounded-2xl text-3xl font-black shadow-[0_20px_40px_-5px_#f97316] hover:bg-orange-600 transition-all shadow-secondary/30 active:scale-95">
+        <button id="submitBtn" type="button"onclick="sendToWA()" class="w-full bg-secondary text-white py-6 rounded-2xl text-3xl font-black shadow-[0_20px_40px_-5px_#f97316] hover:bg-orange-600 transition-all shadow-secondary/30 active:scale-95">
             تأكيد الطلب الآن
         </button>
         <p class="text-center text-xs text-slate-500 pt-4">سيتم الاتصال بك لتأكيد العنوان قبل الإرسال.</p>
@@ -225,45 +225,28 @@
                     <p class="text-center text-xs text-slate-500 pt-4">سيتم الاتصال بك لتأكيد العنوان قبل الإرسال.</p>
                 </form>
                 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. قلب على الفورم والزر
-    const form = document.querySelector('form');
-    const btn = document.getElementById('submitBtn');
+function sendToWA() {
+    // 1. جبد المعلومات (تأكد أن name كاين في الخانات)
+    const name = document.getElementsByName('name')[0].value;
+    const phone = document.getElementsByName('phone')[0].value;
+    const city = document.getElementsByName('city')[0].value;
 
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // حبس الصفحة ما ترفريشيش
-            
-            // 2. جبد المعلومات (تأكد أن الخانات عندك فيهم name="name" و name="phone" و name="city")
-            const name = form.querySelector('[name="name"]').value;
-            const phone = form.querySelector('[name="phone"]').value;
-            const city = form.querySelector('[name="city"]').value;
-            
-            // 3. نمرة التاجر (بدلها بالنمرة الحقيقية)
-            const whatsappNumber = '212625865155'; 
-            
-            // 4. رسالة منظمة (مع Emoji باش تبان احترافية)
-            const text = `*طلب جديد من صفحة الهبوط* 🚀%0A` +
-                         `---------------------------%0A` +
-                         `👤 *الاسم:* ${name}%0A` +
-                         `📞 *الهاتف:* ${phone}%0A` +
-                         `🏙️ *المدينة:* ${city}%0A` +
-                         `---------------------------%0A` +
-                         `يرجى تأكيد الطلبية.`;
-
-            // 5. تحويل الكليان
-            const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-            
-            // تبديل شكل الزر باش يعرف الكليان بلي الطلب داز
-            btn.innerText = 'جاري التحويل للواتساب...';
-            btn.style.opacity = '0.7';
-            btn.disabled = true;
-
-            // توجيه للواتساب
-            window.location.href = url;
-        });
+    // 2. تأكد بلي الخانات عامرين (اختياري)
+    if(name == "" || phone == "") {
+        alert("يرجى ملء الاسم ورقم الهاتف");
+        return;
     }
-});
+
+    // 3. نمرة التاجر (بدلها بنمرتك)
+    const whatsappNumber = '212625865155'; 
+    
+    // 4. تجهيز الرابط
+    const message = `*طلب جديد من Luxury Brand* %0A*الاسم:* ${name} %0A*الهاتف:* ${phone} %0A*المدينة:* ${city}`;
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+    // 5. التحويل للواتساب
+    window.location.href = url;
+}
 </script>
             </div>
         </div>
