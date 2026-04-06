@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القطاعة الاحترافية 12 في 1 | المطبخ الذكي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .font-tajawal { font-family: 'Tajawal', sans-serif; }
+        /* خلفية الهيرو مع تباين عالي */
+        .hero-section { 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200'); 
+            background-size: cover; 
+            background-position: center;
+            min-height: 90vh;
+        }
+        .order-btn { animation: pulse-red 2s infinite; }
+        @keyframes pulse-red { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        /* أنيمايشن خفيفة لصورة المنتج */
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+    </style>
+</head>
+<body class="bg-slate-50 overflow-x-hidden">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md h-20 flex items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-3xl font-black text-red-600 font-tajawal italic">KITCHEN PRO</div>
+            <a href="#order" class="bg-red-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg">اطلب الآن</a>
+        </div>
+    </nav>
+
+    <header class="hero-section pt-32 pb-20 flex items-center relative">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-right">
+            <div class="space-y-6">
+                <div class="inline-block bg-orange-500 text-white px-4 py-1 rounded-lg font-bold text-sm">🚚 عرض محدود: التوصيل مجاني اليوم فقط!</div>
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-tight font-tajawal">
+                    قطعي الخضرة في <br><span class="text-orange-400">ثواني معدودة</span> وبلا تمارة!
+                </h1>
+                <p class="text-xl text-gray-200 leading-relaxed">
+                    وداعاً للوقوف الطويل في المطبخ. القطاعة الاحترافية 12 في 1 هي الحل الأمثل لتحضير أسرع وأجمل الأطباق المغربية في وقت قياسي.
+                </p>
+                <div class="pt-8">
+                    <a href="#order" class="order-btn inline-block bg-red-600 text-white px-12 py-5 rounded-2xl text-2xl font-black shadow-2xl transition-transform hover:scale-105">
+                        أريد تأكيد الطلب بـ 189 درهم
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?q=80&w=800" alt="Kitchen Tool" class="floating relative z-10 w-full max-w-md mx-auto rounded-[3rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.3)] border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div class="absolute inset-0 bg-red-500 rounded-full blur-[150px] opacity-25"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16 font-tajawal text-slate-800 underline decoration-orange-500 decoration-4 underline-offset-8">شنو قالو علينا الزبناء ديالنا؟</h2>
+            <div class="grid md:grid-cols-3 gap-10 text-right">
+                
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-lg space-y-6 transform hover:scale-105 transition-all">
+                    <div class="flex items-center gap-4 border-b border-slate-200 pb-4">
+                        <img class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" src="https://i.pravatar.cc/150?u=fatima" alt="fatima">
+                        <div>
+                            <h4 class="font-bold text-xl">فاطمة الزهراء من الدار البيضاء</h4>
+                            <div class="text-orange-500 text-sm font-bold">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-lg text-slate-700 leading-relaxed">"بصراحة، ما كدبوش! وفّرات عليا الوقت بزاف فـ رمضان. قطّاعة واعرة وكتخلي الشلاظة تبان مقادة. شكراً لكم."</p>
+                </div>
+                
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-lg space-y-6 transform hover:scale-105 transition-all">
+                    <div class="flex items-center gap-4 border-b border-slate-200 pb-4">
+                        <img class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" src="https://i.pravatar.cc/150?u=hassan" alt="hassan">
+                        <div>
+                            <h4 class="font-bold text-xl">حسن من طنجة</h4>
+                            <div class="text-orange-500 text-sm font-bold">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-lg text-slate-700 leading-relaxed">"جودة ممتازة، والأمواس حادّين بزاف. قطّع البطاطس والبصل في ثواني. التوصيل كان سريع والدفع عند الاستلام."</p>
+                </div>
+                
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-lg space-y-6 transform hover:scale-105 transition-all">
+                    <div class="flex items-center gap-4 border-b border-slate-200 pb-4">
+                        <img class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" src="https://i.pravatar.cc/150?u=amina" alt="amina">
+                        <div>
+                            <h4 class="font-bold text-xl">أمينة من مراكش</h4>
+                            <div class="text-orange-500 text-sm font-bold">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-lg text-slate-700 leading-relaxed">"شريتها كهدية للوالدة وعجباتها بزاف. مريحة في الاستعمال وما كاتخسرش الخضرة. كننصح بيها كل امرأة مغربية."</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-12 font-tajawal text-slate-800 underline decoration-red-500 decoration-4 underline-offset-8">لماذا هذه القطاعة بالتحديد؟</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-inner">
+                    <h3 class="text-2xl font-bold mb-6 text-red-600">📊 المواصفات التقنية:</h3>
+                    <ul class="space-y-4 border-t border-slate-200 pt-4 text-right">
+                        <li class="flex justify-between border-b border-slate-100 pb-2"><strong>المادة:</strong> <span>بلاستيك صحي (BPA Free) + إينوكس</span></li>
+                        <li class="flex justify-between border-b border-slate-100 pb-2"><strong>عدد الملحقات:</strong> <span>12 شفرة قابلة للتبديل</span></li>
+                        <li class="flex justify-between border-b border-slate-100 pb-2"><strong>الاستخدام:</strong> <span>بصل، بطاطس، جزر، فواكه، جبن</span></li>
+                        <li class="flex justify-between border-b border-slate-100 pb-2"><strong>الأمان:</strong> <span>مزودة بواقي لحماية الأصابع</span></li>
+                        <li class="flex justify-between"><strong>السعة:</strong> <span>1.5 لتر (وعاء تجميع كبير)</span></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6 text-right">
+                    <h3 class="text-2xl font-bold text-red-600">💡 طريقة الاستعمال السهلة:</h3>
+                    <div class="flex gap-4 items-start">
+                        <div class="bg-orange-500 text-white font-black rounded-full w-10 h-10 flex items-center justify-center shrink-0 shadow-lg">1</div>
+                        <p class="text-lg font-bold text-slate-700">اختاري الشفرة المناسبة (حك، تقطيع، أو فرم).</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="bg-orange-500 text-white font-black rounded-full w-10 h-10 flex items-center justify-center shrink-0 shadow-lg">2</div>
+                        <p class="text-lg font-bold text-slate-700">ضعي الخضروات في مكانها المخصص واستخدمي المقبض.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="bg-orange-500 text-white font-black rounded-full w-10 h-10 flex items-center justify-center shrink-0 shadow-lg">3</div>
+                        <p class="text-lg font-bold text-slate-700">إغسلي الشفرات تحت الماء الجاري في ثواني.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="py-24 bg-slate-900 text-white relative border-t border-white/5">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 text-right">
+                <h2 class="text-5xl font-black font-tajawal leading-tight italic">استعدي لرمضان <br>بأفضل أداة في مطبخك!</h2>
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/20 shadow-2xl">
+                    <p class="text-2xl mb-2">ثمن العرض (حتى نهاية اليوم):</p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-6xl font-black text-orange-400">189 درهم</span>
+                        <span class="text-2xl text-gray-500 line-through">349 درهم</span>
+                    </div>
+                    <p class="mt-4 text-green-400 font-bold text-lg">🎁 سكين تقشير احترافي مجاني مع كل طلبية مؤكدة!</p>
+                </div>
+            </div>
+            
+            <div class="bg-white text-gray-900 p-10 rounded-[3rem] shadow-2xl border-4 border-white">
+                <h3 class="text-2xl font-black text-center mb-8 font-tajawal text-slate-800">أدخلي معلوماتك للطلب</h3>
+                <form class="space-y-5 text-right">
+                    <input type="text" placeholder="الاسم الكامل" class="w-full p-4 rounded-xl bg-gray-100 border-2 border-transparent focus:border-red-500 outline-none transition text-lg shadow-inner">
+                    <input type="tel" placeholder="رقم الهاتف (06..)" class="w-full p-4 rounded-xl bg-gray-100 border-2 border-transparent focus:border-red-500 outline-none transition text-lg text-left shadow-inner" dir="ltr">
+                    <input type="text" placeholder="المدينة" class="w-full p-4 rounded-xl bg-gray-100 border-2 border-transparent focus:border-red-500 outline-none transition text-lg shadow-inner">
+                    <button class="order-btn w-full bg-red-600 text-white py-5 rounded-2xl text-3xl font-black shadow-xl hover:bg-red-700 transition-all active:scale-95 transform hover:scale-105">تأكيد الشراء الآن</button>
+                    <p class="text-xs text-center text-gray-400 font-bold">سيتم الاتصال بك خلال أقل من 12 ساعة لتأكيد العنوان.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/212625865155" class="fixed bottom-6 left-6 z-50 hover:scale-110 transition-transform">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-16 h-16 drop-shadow-2xl shadow-green-500/50">
+    </a>
+
+    <footer class="py-10 text-center bg-slate-900 text-gray-500 border-t border-white/5">
+        <p>KITCHEN PRO &copy; 2026 - جميع الحقوق محفوظة</p>
+    </footer>
+
+</body>
+</html>
